@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="BumperBotLaser">
+  <link
+    name="base_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.028115 0.0019307 0.057486"
+        rpy="0 0 0" />
+      <mass
+        value="0.40531" />
+      <inertia
+        ixx="0.00042588"
+        ixy="2.6038E-05"
+        ixz="5.0103E-07"
+        iyy="0.0004036"
+        iyz="1.5986E-07"
+        izz="0.00081597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/base_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.019608 0.019608 0.019608 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/base_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.028115 0.0019307 0.035306"
+        rpy="0 0 0" />
+      <mass
+        value="0.40531" />
+      <inertia
+        ixx="0.00042588"
+        ixy="2.6038E-05"
+        ixz="5.0103E-07"
+        iyy="0.0004036"
+        iyz="1.5986E-07"
+        izz="0.00081597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.019608 0.019608 0.019608 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.02218"
+      rpy="0 0 0" />
+    <parent
+      link="base_foot_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="2.4008E-06 3.0009E-06 0.0047006"
+        rpy="0 0 0" />
+      <mass
+        value="0.014739" />
+      <inertia
+        ixx="2.5308E-06"
+        ixy="1.3204E-09"
+        ixz="4.2343E-10"
+        iyy="2.5286E-06"
+        iyz="2.1865E-10"
+        izz="4.4077E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.0817250000000045 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-3.4265E-06 1.7404E-06 -0.0047006"
+        rpy="0 0 0" />
+      <mass
+        value="0.014739" />
+      <inertia
+        ixx="2.5314E-06"
+        ixy="-2.8957E-11"
+        ixz="4.7594E-10"
+        iyy="2.528E-06"
+        iyz="-2.416E-11"
+        izz="4.4077E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0827249999999955 0"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_caster_link">
+    <inertial>
+      <origin
+        xyz="-3.7183E-08 -4.9161E-08 0.0077372"
+        rpy="0 0 0" />
+      <mass
+        value="0.0020373" />
+      <inertia
+        ixx="5.7436E-08"
+        ixy="-3.4042E-09"
+        ixz="1.7705E-13"
+        iyy="4.2537E-08"
+        iyz="2.3421E-13"
+        izz="6.9442E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/front_caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/front_caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_caster_joint"
+    type="fixed">
+    <origin
+      xyz="0.0289043663959501 0 -0.02218"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_caster_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_caster_link">
+    <inertial>
+      <origin
+        xyz="-3.71829964110337E-08 -4.91614260888715E-08 0.00773720092553878"
+        rpy="0 0 0" />
+      <mass
+        value="0.00203727928767678" />
+      <inertia
+        ixx="5.74357335011943E-08"
+        ixy="-3.40420205982782E-09"
+        ixz="1.77053129228762E-13"
+        iyy="4.25371360767332E-08"
+        iyz="2.34214501446374E-13"
+        izz="6.94416877400952E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/rear_caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/rear_caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_caster_joint"
+    type="fixed">
+    <origin
+      xyz="-0.08109563360405 0 -0.02218"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_caster_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="-0.0121635345530738 0.000482112723461479 -0.0287648853429119"
+        rpy="0 0 0" />
+      <mass
+        value="0.0730845765879762" />
+      <inertia
+        ixx="1.95808776634039E-05"
+        ixy="-1.03933463680521E-07"
+        ixz="4.28390881766784E-07"
+        iyy="2.41250105378788E-05"
+        iyz="-9.42691068549122E-09"
+        izz="4.14184560608997E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0189923378935408 4.99776723541859E-05 0.147999999999995"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-6.32448475772623E-05 -0.000138584619325432 -0.00175299896890024"
+        rpy="0 0 0" />
+      <mass
+        value="0.00126111455014472" />
+      <inertia
+        ixx="7.37124295544829E-08"
+        ixy="-3.4394923162254E-12"
+        ixz="-1.78678667908353E-11"
+        iyy="3.44483240509786E-08"
+        iyz="4.46525635564553E-10"
+        izz="4.00056922420437E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.040904366395938 -0.00589533559393918 0.108110464460819"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pi_link">
+    <inertial>
+      <origin
+        xyz="-0.0145065067770703 -0.000743510804877889 0.00354600980789387"
+        rpy="0 0 0" />
+      <mass
+        value="0.0191036864073752" />
+      <inertia
+        ixx="2.18672009096868E-06"
+        ixy="-9.52868497095503E-09"
+        ixz="-3.33922055607631E-09"
+        iyy="4.7411152805042E-06"
+        iyz="4.65625999057636E-11"
+        izz="6.62273255784885E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/pi_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/pi_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pi_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0264122835221681 -0.0313239696089781 0.0561"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pi_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="driver_link">
+    <inertial>
+      <origin
+        xyz="0.000938376940393549 0.00227317770062375 0.00527064459219691"
+        rpy="0 0 0" />
+      <mass
+        value="0.0108211730968815" />
+      <inertia
+        ixx="2.17625406421576E-06"
+        ixy="-4.40612528080354E-08"
+        ixz="-1.43320184712678E-08"
+        iyy="1.79740448233232E-06"
+        iyz="3.69097463850366E-07"
+        izz="2.97363329279334E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/driver_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/driver_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="driver_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0438382120566316 0.0298743923406085 0.0565"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="driver_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="nano_link">
+    <inertial>
+      <origin
+        xyz="-7.05451429052553E-05 9.62883158873856E-05 -0.000586124943715894"
+        rpy="0 0 0" />
+      <mass
+        value="0.00217968184782145" />
+      <inertia
+        ixx="1.57025845390243E-07"
+        ixy="9.17676195022362E-08"
+        ixz="-3.80435085498668E-11"
+        iyy="1.57027166165118E-07"
+        iyz="3.81599795466104E-11"
+        izz="3.08413157394465E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/nano_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://BumperBotLaser/meshes/nano_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="nano_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0623428254587056 -0.0357216668041171 0.0091"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="nano_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
